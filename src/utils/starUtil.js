@@ -2,7 +2,6 @@ import axios from "axios"
 
 export const getAllStarByUser = async() => {
 	// ユーザーごとのお気に入り情報をすべて取得
-	axios.defaults.withCredentials = true
 	const {data} = await axios.get(
 		`${process.env.REACT_APP_API_URL}/stars`
 	)

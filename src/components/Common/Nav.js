@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import useAuth from '../../hooks/useAuth'
 
 const Nav = ({setDispStarNum}) => {
+	const {logOut} = useAuth();
 	return (
 		<nav className="bg-yellow-600">
 			<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -21,7 +23,7 @@ const Nav = ({setDispStarNum}) => {
 					</div>
 					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
 						<div className="flex flex-shrink-0 items-center">
-						<FontAwesomeIcon icon={faHouse} />
+						<FontAwesomeIcon icon={faRightFromBracket} className="cursor-pointer" onClick={logOut} />
 						</div>
 						<div className="hidden sm:ml-6 sm:block">
 							<div className="flex space-x-4">
